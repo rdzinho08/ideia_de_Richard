@@ -84,13 +84,21 @@ async function loadProducts() {
     
     if (window.lucide) lucide.createIcons();
 }
-
-
 async function loadCarousel() {
     const carouselWrapper = document.getElementById('carousel-wrapper');
     if (!carouselWrapper) return;
 
-  
+    const items = [
+        { name: 'Chuteira Campo', price: '199.90' },
+        { name: 'Bola Basquete', price: '129.90' },
+        { name: 'Kettlebell 10kg', price: '89.90' },
+        { name: 'Relógio Esportivo', price: '250.00' }
+    ];
+
+
+
+
+
     carouselWrapper.innerHTML = items.map(item => `
         <div class="min-w-[140px] border border-gray-300 rounded-xl p-3 bg-gray-50 flex-shrink-0 shadow-sm">
             <p class="text-xs font-bold truncate text-gray-800">${item.name}</p>
